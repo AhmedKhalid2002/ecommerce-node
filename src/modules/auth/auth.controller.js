@@ -25,7 +25,7 @@ export const signup=asyncHandler(async(req,res,next)=>{
     // * create user
     await User.create({...req.body})
     // * create confirm link
-    const confirmLink=`http://localhost:3000/auth/active_account/${token}`;
+    const confirmLink=`https://ecommerce-node-tau.vercel.app/auth/active_account/${token}`;
 
     // * send email
     const messageSend=await sendEmail({
